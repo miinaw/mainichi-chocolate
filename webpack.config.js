@@ -5,7 +5,11 @@ module.exports = {
 
   mode: 'development', //development or production
 
-  entry: './src/script/index.js',
+  entry: {
+    'index': [
+      path.resolve(__dirname, 'src/assets/script/index.js')
+    ],
+  },
 
   output: {
       path: path.resolve(__dirname, 'dist'),
@@ -20,11 +24,6 @@ module.exports = {
       use: [
         {
         loader: 'babel-loader',
-        options: {
-          presets: [
-          '@babel/preset-env'
-          ]
-        }
         }
       ],
       exclude: /node_modules/,
