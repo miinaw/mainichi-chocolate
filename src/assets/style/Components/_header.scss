@@ -5,8 +5,21 @@
     width: $container-width;
     margin: auto;
     align-items: center;
-    .logo.pc img {
-      width: 150px;
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        opacity: .6;
+      }
+    }
+    .logo.pc {
+      a {
+        display: block;
+      }
+      img {
+      width: 104px;
+      height: 100%;
+      }
     }
     .logo.sp {
       display: none;
