@@ -1,10 +1,13 @@
 @media screen and (min-width: 480px) {
   .c-header {
-    display: flex;
-    justify-content: space-between;
-    width: $container-width;
-    margin: auto;
-    align-items: center;
+    border-bottom: 1px solid #ccc;
+    .column {
+      display: flex;
+      justify-content: space-between;
+      width: $container-width;
+      margin: auto;
+      align-items: center;
+    }
     a {
       color: #333;
       text-decoration: none;
@@ -12,20 +15,33 @@
         opacity: .6;
       }
     }
+    li {
+      list-style-type: none;
+    }
     .logo.pc {
       a {
         display: block;
       }
       img {
-      width: 104px;
+      width: 90px;
       height: 100%;
+      margin-bottom: 8px;
       }
     }
     .logo.sp {
       display: none;
     }
-    li {
-      list-style-type: none;
+    .category {
+      display: flex;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: -.5px;
+      li + li {
+        margin-left: 34px;
+      }
+      .children {
+        display: none;
+      }
     }
   }
 }
